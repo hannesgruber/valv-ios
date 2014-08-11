@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7449DCEF19990A4700AB0C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DCEE19990A4700AB0C9B /* AppDelegate.swift */; };
+		7449DCF119990A4700AB0C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DCF019990A4700AB0C9B /* ViewController.swift */; };
+		7449DCF419990A4700AB0C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7449DCF219990A4700AB0C9B /* Main.storyboard */; };
+		7449DCF619990A4700AB0C9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7449DCF519990A4700AB0C9B /* Images.xcassets */; };
+		7449DD0219990A4700AB0C9B /* ValvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DD0119990A4700AB0C9B /* ValvTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7449DCFC19990A4700AB0C9B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7449DCE119990A4700AB0C9B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7449DCE819990A4700AB0C9B;
+			remoteInfo = Valv;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7449DCE919990A4700AB0C9B /* Valv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valv.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7449DCED19990A4700AB0C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7449DCEE19990A4700AB0C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7449DCF019990A4700AB0C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7449DCF319990A4700AB0C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7449DCF519990A4700AB0C9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7449DCFB19990A4700AB0C9B /* ValvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7449DD0019990A4700AB0C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7449DD0119990A4700AB0C9B /* ValvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValvTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7449DCE619990A4700AB0C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449DCF819990A4700AB0C9B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7449DCE019990A4700AB0C9B = {
+			isa = PBXGroup;
+			children = (
+				7449DCEB19990A4700AB0C9B /* Valv */,
+				7449DCFE19990A4700AB0C9B /* ValvTests */,
+				7449DCEA19990A4700AB0C9B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7449DCEA19990A4700AB0C9B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7449DCE919990A4700AB0C9B /* Valv.app */,
+				7449DCFB19990A4700AB0C9B /* ValvTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7449DCEB19990A4700AB0C9B /* Valv */ = {
+			isa = PBXGroup;
+			children = (
+				7449DCEE19990A4700AB0C9B /* AppDelegate.swift */,
+				7449DCF019990A4700AB0C9B /* ViewController.swift */,
+				7449DCF219990A4700AB0C9B /* Main.storyboard */,
+				7449DCF519990A4700AB0C9B /* Images.xcassets */,
+				7449DCEC19990A4700AB0C9B /* Supporting Files */,
+			);
+			path = Valv;
+			sourceTree = "<group>";
+		};
+		7449DCEC19990A4700AB0C9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7449DCED19990A4700AB0C9B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7449DCFE19990A4700AB0C9B /* ValvTests */ = {
+			isa = PBXGroup;
+			children = (
+				7449DD0119990A4700AB0C9B /* ValvTests.swift */,
+				7449DCFF19990A4700AB0C9B /* Supporting Files */,
+			);
+			path = ValvTests;
+			sourceTree = "<group>";
+		};
+		7449DCFF19990A4700AB0C9B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7449DD0019990A4700AB0C9B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7449DCE819990A4700AB0C9B /* Valv */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7449DD0519990A4700AB0C9B /* Build configuration list for PBXNativeTarget "Valv" */;
+			buildPhases = (
+				7449DCE519990A4700AB0C9B /* Sources */,
+				7449DCE619990A4700AB0C9B /* Frameworks */,
+				7449DCE719990A4700AB0C9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Valv;
+			productName = Valv;
+			productReference = 7449DCE919990A4700AB0C9B /* Valv.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7449DCFA19990A4700AB0C9B /* ValvTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7449DD0819990A4700AB0C9B /* Build configuration list for PBXNativeTarget "ValvTests" */;
+			buildPhases = (
+				7449DCF719990A4700AB0C9B /* Sources */,
+				7449DCF819990A4700AB0C9B /* Frameworks */,
+				7449DCF919990A4700AB0C9B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7449DCFD19990A4700AB0C9B /* PBXTargetDependency */,
+			);
+			name = ValvTests;
+			productName = ValvTests;
+			productReference = 7449DCFB19990A4700AB0C9B /* ValvTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7449DCE119990A4700AB0C9B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Hannes Gruber";
+				TargetAttributes = {
+					7449DCE819990A4700AB0C9B = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					7449DCFA19990A4700AB0C9B = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 7449DCE819990A4700AB0C9B;
+					};
+				};
+			};
+			buildConfigurationList = 7449DCE419990A4700AB0C9B /* Build configuration list for PBXProject "Valv" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7449DCE019990A4700AB0C9B;
+			productRefGroup = 7449DCEA19990A4700AB0C9B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7449DCE819990A4700AB0C9B /* Valv */,
+				7449DCFA19990A4700AB0C9B /* ValvTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7449DCE719990A4700AB0C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449DCF419990A4700AB0C9B /* Main.storyboard in Resources */,
+				7449DCF619990A4700AB0C9B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449DCF919990A4700AB0C9B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7449DCE519990A4700AB0C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449DCF119990A4700AB0C9B /* ViewController.swift in Sources */,
+				7449DCEF19990A4700AB0C9B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449DCF719990A4700AB0C9B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449DD0219990A4700AB0C9B /* ValvTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7449DCFD19990A4700AB0C9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7449DCE819990A4700AB0C9B /* Valv */;
+			targetProxy = 7449DCFC19990A4700AB0C9B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7449DCF219990A4700AB0C9B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7449DCF319990A4700AB0C9B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7449DD0319990A4700AB0C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7449DD0419990A4700AB0C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7449DD0619990A4700AB0C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Valv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7449DD0719990A4700AB0C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Valv/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7449DD0919990A4700AB0C9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ValvTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valv.app/Valv";
+			};
+			name = Debug;
+		};
+		7449DD0A19990A4700AB0C9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ValvTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Valv.app/Valv";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7449DCE419990A4700AB0C9B /* Build configuration list for PBXProject "Valv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449DD0319990A4700AB0C9B /* Debug */,
+				7449DD0419990A4700AB0C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7449DD0519990A4700AB0C9B /* Build configuration list for PBXNativeTarget "Valv" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449DD0619990A4700AB0C9B /* Debug */,
+				7449DD0719990A4700AB0C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7449DD0819990A4700AB0C9B /* Build configuration list for PBXNativeTarget "ValvTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449DD0919990A4700AB0C9B /* Debug */,
+				7449DD0A19990A4700AB0C9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7449DCE119990A4700AB0C9B /* Project object */;
+}
