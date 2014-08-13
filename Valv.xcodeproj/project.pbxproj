@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		7449DCEF19990A4700AB0C9B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DCEE19990A4700AB0C9B /* AppDelegate.swift */; };
-		7449DCF119990A4700AB0C9B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DCF019990A4700AB0C9B /* ViewController.swift */; };
+		7449DCF119990A4700AB0C9B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DCF019990A4700AB0C9B /* SearchViewController.swift */; };
 		7449DCF419990A4700AB0C9B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7449DCF219990A4700AB0C9B /* Main.storyboard */; };
 		7449DCF619990A4700AB0C9B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7449DCF519990A4700AB0C9B /* Images.xcassets */; };
 		7449DD0219990A4700AB0C9B /* ValvTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7449DD0119990A4700AB0C9B /* ValvTests.swift */; };
+		7476C58D199A5ECE0051FBA1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476C58C199A5ECE0051FBA1 /* DetailsViewController.swift */; };
+		7476C58F199B46F60051FBA1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476C58E199B46F60051FBA1 /* SettingsViewController.swift */; };
+		7476C591199B766A0051FBA1 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476C590199B766A0051FBA1 /* LoginManager.swift */; };
+		7476C593199BF36F0051FBA1 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7476C592199BF36F0051FBA1 /* Product.swift */; };
+		74B0A116199956250098D37D /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0A115199956250098D37D /* SearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +33,17 @@
 		7449DCE919990A4700AB0C9B /* Valv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Valv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7449DCED19990A4700AB0C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7449DCEE19990A4700AB0C9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7449DCF019990A4700AB0C9B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7449DCF019990A4700AB0C9B /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7449DCF319990A4700AB0C9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7449DCF519990A4700AB0C9B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7449DCFB19990A4700AB0C9B /* ValvTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValvTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7449DD0019990A4700AB0C9B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7449DD0119990A4700AB0C9B /* ValvTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValvTests.swift; sourceTree = "<group>"; };
+		7476C58C199A5ECE0051FBA1 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		7476C58E199B46F60051FBA1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7476C590199B766A0051FBA1 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		7476C592199BF36F0051FBA1 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		74B0A115199956250098D37D /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +86,15 @@
 			isa = PBXGroup;
 			children = (
 				7449DCEE19990A4700AB0C9B /* AppDelegate.swift */,
-				7449DCF019990A4700AB0C9B /* ViewController.swift */,
+				7449DCF019990A4700AB0C9B /* SearchViewController.swift */,
+				74B0A115199956250098D37D /* SearchManager.swift */,
+				7476C58C199A5ECE0051FBA1 /* DetailsViewController.swift */,
+				7476C58E199B46F60051FBA1 /* SettingsViewController.swift */,
+				7476C590199B766A0051FBA1 /* LoginManager.swift */,
 				7449DCF219990A4700AB0C9B /* Main.storyboard */,
 				7449DCF519990A4700AB0C9B /* Images.xcassets */,
 				7449DCEC19990A4700AB0C9B /* Supporting Files */,
+				7476C592199BF36F0051FBA1 /* Product.swift */,
 			);
 			path = Valv;
 			sourceTree = "<group>";
@@ -158,6 +173,7 @@
 				TargetAttributes = {
 					7449DCE819990A4700AB0C9B = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 45NWKUAC4H;
 					};
 					7449DCFA19990A4700AB0C9B = {
 						CreatedOnToolsVersion = 6.0;
@@ -208,8 +224,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7449DCF119990A4700AB0C9B /* ViewController.swift in Sources */,
+				74B0A116199956250098D37D /* SearchManager.swift in Sources */,
+				7449DCF119990A4700AB0C9B /* SearchViewController.swift in Sources */,
 				7449DCEF19990A4700AB0C9B /* AppDelegate.swift in Sources */,
+				7476C58F199B46F60051FBA1 /* SettingsViewController.swift in Sources */,
+				7476C58D199A5ECE0051FBA1 /* DetailsViewController.swift in Sources */,
+				7476C591199B766A0051FBA1 /* LoginManager.swift in Sources */,
+				7476C593199BF36F0051FBA1 /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,9 +348,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Valv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -338,9 +361,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Valv/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -397,6 +422,7 @@
 				7449DD0719990A4700AB0C9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7449DD0819990A4700AB0C9B /* Build configuration list for PBXNativeTarget "ValvTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +431,7 @@
 				7449DD0A19990A4700AB0C9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

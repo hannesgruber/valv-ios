@@ -8,6 +8,11 @@
 
 import UIKit
 
+var USERNAME = ""
+var PASSWORD = ""
+var AUTHKEY = ""
+var LOGGED_IN = false
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
                             
@@ -16,6 +21,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        
+        if let userDefaults = NSUserDefaults.standardUserDefaults() {
+            println("appdelegate userdefaults")
+            let username : NSString? = userDefaults.objectForKey("username") as? NSString
+            let password : NSString? = userDefaults.objectForKey("password") as? NSString
+            let authKey : NSString? = userDefaults.objectForKey("authKey") as? NSString
+            
+            println("appdelegate username=\(username) password=\(password) authKey=\(authKey)")
+            if username != nil && password != nil && authKey != nil {
+                println("YES")
+                LOGGED_IN = true
+                USERNAME = username!
+                PASSWORD = password!
+                AUTHKEY = authKey!
+            }
+        }
+
+        
+        
+        
         return true
     }
 
