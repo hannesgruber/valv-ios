@@ -41,6 +41,9 @@ class SearchManager: NSObject, NSXMLParserDelegate {
         let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
+            
+            // TODO: Handle errors. invalid authkey results in http 200 but error tag in xml
+            
             if error {
                 println(error.localizedDescription)
             }
@@ -49,11 +52,13 @@ class SearchManager: NSObject, NSXMLParserDelegate {
             parser.delegate = self
             parser.parse()
             
-            for p:product in self.products{
-                println(p.toString())
+            if self.products != nil {
+                for p:product in self.products {
+                    println(p.toString())
+                }
+                
+                self.searchResults = self.products
             }
-            
-            self.searchResults = self.products
             
             callback()
         });
