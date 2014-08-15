@@ -21,8 +21,12 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    
     @IBOutlet weak var ratingStar: UIImageView!
+    
+    // Rating Bar
+    @IBOutlet weak var ratingBarLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,6 +46,30 @@ class DetailsViewController: UIViewController {
 
         ratingLabel.text = ratingText
         ratingStar.image = UIImage(named: starName)
+        
+        // Update Rating Bar
+        if !product.userRating.isEmpty {
+            ratingBarLabel.text = ratingText
+            var ratingValue = ratingText.toInt()
+            for i in 1...10 {
+                if i <= ratingValue {
+                    (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_user.png")
+                } else {
+                    (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_mean.png")
+                }
+            }
+            
+        } else {
+            ratingBarLabel.text = ""
+        }
+
+    }
+    
+    @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
+        println("CLICK!!!\(sender.view.tag)")
+        
+        
+        
     }
 
 }

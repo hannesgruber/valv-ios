@@ -20,6 +20,7 @@
 		74AA843F199DFFE80069E6C4 /* rating_mean.png in Resources */ = {isa = PBXBuildFile; fileRef = 74AA843C199DFFE80069E6C4 /* rating_mean.png */; };
 		74AA8440199DFFE80069E6C4 /* rating_rec.png in Resources */ = {isa = PBXBuildFile; fileRef = 74AA843D199DFFE80069E6C4 /* rating_rec.png */; };
 		74AA8441199DFFE80069E6C4 /* rating_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 74AA843E199DFFE80069E6C4 /* rating_user.png */; };
+		74AA8443199E5F320069E6C4 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA8442199E5F320069E6C4 /* RatingManager.swift */; };
 		74B0A116199956250098D37D /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0A115199956250098D37D /* SearchManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		74AA843C199DFFE80069E6C4 /* rating_mean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rating_mean.png; path = Images.xcassets/rating_mean.png; sourceTree = "<group>"; };
 		74AA843D199DFFE80069E6C4 /* rating_rec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rating_rec.png; path = Images.xcassets/rating_rec.png; sourceTree = "<group>"; };
 		74AA843E199DFFE80069E6C4 /* rating_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rating_user.png; path = Images.xcassets/rating_user.png; sourceTree = "<group>"; };
+		74AA8442199E5F320069E6C4 /* RatingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		74B0A115199956250098D37D /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,12 +95,12 @@
 		7449DCEB19990A4700AB0C9B /* Valv */ = {
 			isa = PBXGroup;
 			children = (
+				7476C590199B766A0051FBA1 /* LoginManager.swift */,
 				7449DCEE19990A4700AB0C9B /* AppDelegate.swift */,
 				7449DCF019990A4700AB0C9B /* SearchViewController.swift */,
 				74B0A115199956250098D37D /* SearchManager.swift */,
 				7476C58C199A5ECE0051FBA1 /* DetailsViewController.swift */,
 				7476C58E199B46F60051FBA1 /* SettingsViewController.swift */,
-				7476C590199B766A0051FBA1 /* LoginManager.swift */,
 				7449DCF219990A4700AB0C9B /* Main.storyboard */,
 				7449DCF519990A4700AB0C9B /* Images.xcassets */,
 				74AA843C199DFFE80069E6C4 /* rating_mean.png */,
@@ -107,6 +109,7 @@
 				7449DCEC19990A4700AB0C9B /* Supporting Files */,
 				7476C592199BF36F0051FBA1 /* Product.swift */,
 				7476C594199C02C10051FBA1 /* SearchResultCell.swift */,
+				74AA8442199E5F320069E6C4 /* RatingManager.swift */,
 			);
 			path = Valv;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				7449DCEF19990A4700AB0C9B /* AppDelegate.swift in Sources */,
 				7476C58F199B46F60051FBA1 /* SettingsViewController.swift in Sources */,
 				7476C58D199A5ECE0051FBA1 /* DetailsViewController.swift in Sources */,
+				74AA8443199E5F320069E6C4 /* RatingManager.swift in Sources */,
 				7476C591199B766A0051FBA1 /* LoginManager.swift in Sources */,
 				7476C595199C02C10051FBA1 /* SearchResultCell.swift in Sources */,
 				7476C593199BF36F0051FBA1 /* Product.swift in Sources */,
