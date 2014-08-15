@@ -10,6 +10,8 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    var product: Product!
+    
     var ptitle: String!
     var style: String!
     var desc: String!
@@ -20,13 +22,26 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
     
+    @IBOutlet weak var ratingStar: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.text = ptitle
-        styleLabel.text = style
-        descriptionLabel.text = desc
-        ratingLabel.text = rating
+        titleLabel.text = product.title
+        styleLabel.text = product.category
+        descriptionLabel.text = product.desc
+        
+        var ratingText = product.ratingValue
+        var starName = "rating_mean.png"
+        if !product.userRating.isEmpty {
+            ratingText = product.userRating
+            starName = "rating_user.png"
+        } else if !product.userProposedRating.isEmpty {
+            ratingText = product.userProposedRating
+            starName = "rating_rec.png"
+        }
+
+        ratingLabel.text = ratingText
+        ratingStar.image = UIImage(named: starName)
     }
 
 }

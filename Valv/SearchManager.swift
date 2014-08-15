@@ -20,7 +20,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     
     let session = NSURLSession.sharedSession()
     let kaka = "563d427e56666f2866403c357e"
-    var searchResults = [product]()
+    var searchResults = [Product]()
 
     func clearSearchResults(){
         searchResults.removeAll(keepCapacity: false)
@@ -28,6 +28,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     
     func search(searchString : String, callback : ()->Void) {
 
+        // TODO: do more searches if results are larger than pageSize
         var urlString = "http://valv.se/api/\(kaka)/products/search?q=\(searchString)&page=1&pageSize=100"
         
         if(!AUTHKEY.isEmpty) {
@@ -53,7 +54,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
             parser.parse()
             
             if self.products != nil {
-                for p:product in self.products {
+                for p:Product in self.products {
                     println(p.toString())
                 }
                 
@@ -66,26 +67,8 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     }
     
     
-    var products: [product]!
-    struct product {
-        var uuid = ""
-        var title = ""
-        var category = ""
-        var imageUuid = ""
-        var imageLicense = ""
-        var imageFallback = ""
-        var description = ""
-        var ratingValue = ""
-        var ratingCount = ""
-        var userRating = ""
-        var userProposedRating = ""
-        
-        func toString()->String {
-            return "Product uuid:\(uuid) title:\(title) category:\(category) userRating:\(userRating)"
-        }
-    }
-    
-    var currentProduct: product!
+    var products: [Product]!
+    var currentProduct: Product!
     var currentParentElement: String!
     var currentElement: String!
     var currentString = ""
@@ -93,10 +76,10 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     func parser(parser: NSXMLParser!, didStartElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!, attributes attributeDict: [String : String]!) {
         
         if elementName == "products" {
-            products = [product]()
+            products = [Product]()
         }
         if elementName == "product" {
-            currentProduct = product()
+            currentProduct = Product()
             currentParentElement = elementName
         }
         if(elementName == "category") {
@@ -139,7 +122,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
             currentProduct.imageFallback = currentString
         }
         if elementName == "description" {
-            currentProduct.description = currentString
+            currentProduct.desc = currentString
         }
         if elementName == "rated" {
             currentProduct.userRating = currentString

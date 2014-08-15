@@ -73,10 +73,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         if segue.identifier == "detailsSegue" {
             let product = searchManager.searchResults[index.row]
             let vc = segue.destinationViewController as DetailsViewController
-            vc.ptitle = product.title
-            vc.style = product.category
-            vc.desc = product.description
-            vc.rating = product.ratingValue
+            vc.product = product
             // deselect so that row isnt selected when returning from details view
             searchResultsTableView.deselectRowAtIndexPath(index, animated: true)
         }
