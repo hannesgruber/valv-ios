@@ -19,7 +19,6 @@ struct searchResult {
 class SearchManager: NSObject, NSXMLParserDelegate {
     
     let session = NSURLSession.sharedSession()
-    let kaka = "563d427e56666f2866403c357e"
     var searchResults = [Product]()
 
     func clearSearchResults(){
@@ -29,7 +28,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     func search(searchString : String, callback : ()->Void) {
 
         // TODO: do more searches if results are larger than pageSize
-        var urlString = "http://valv.se/api/\(kaka)/products/search?q=\(searchString)&page=1&pageSize=100"
+        var urlString = "http://valv.se/api/\(API_COOKIE)/products/search?q=\(searchString)&page=1&pageSize=100"
         
         if(!AUTHKEY.isEmpty) {
             urlString += "&authKey=\(AUTHKEY)"
@@ -39,13 +38,13 @@ class SearchManager: NSObject, NSXMLParserDelegate {
         
         println(escaped)
 
-        let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
+        let request = NSURLRequest(URL: NSURL.URLWithString(urlString))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
             
             // TODO: Handle errors. invalid authkey results in http 200 but error tag in xml
             
-            if error {
+            if (error != nil) {
                 println(error.localizedDescription)
             }
             

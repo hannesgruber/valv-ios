@@ -13,16 +13,15 @@ var loginManager = LoginManager()
 class LoginManager: NSObject, NSXMLParserDelegate {
     
     let session = NSURLSession.sharedSession()
-    let kaka = "563d427e56666f2866403c357e"
     
     func logout(authKey : String, callback : (success:Bool)->Void) {
-        let urlString = "http://valv.se/api/\(kaka)/auth/logout/\(authKey)"
+        let urlString = "http://valv.se/api/\(API_COOKIE)/auth/logout/\(authKey)"
         let escaped = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
-        let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
+        let request = NSURLRequest(URL: NSURL.URLWithString(escaped!))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
-            if error {
+            if error != nil{
                 println(error.localizedDescription)
             }
             
@@ -41,13 +40,14 @@ class LoginManager: NSObject, NSXMLParserDelegate {
     
     func login(username : String, password: String, callback : (success:Bool)->Void) {
         authKey = ""
-        let urlString = "http://valv.se/api/\(kaka)/auth/login/\(username)/\(password)"
+        let urlString = "http://valv.se/api/\(API_COOKIE)/auth/login/\(username)/\(password)"
         let escaped = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+
         
-        let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
+        let request = NSURLRequest(URL: NSURL.URLWithString(escaped!))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
-            if error {
+            if error != nil {
                 println(error.localizedDescription)
             }
             

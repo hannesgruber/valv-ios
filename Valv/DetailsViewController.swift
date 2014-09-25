@@ -11,11 +11,6 @@ import UIKit
 class DetailsViewController: UIViewController {
     
     var product: Product!
-    
-    var ptitle: String!
-    var style: String!
-    var desc: String!
-    var rating: String!
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var styleLabel: UILabel!
@@ -25,6 +20,14 @@ class DetailsViewController: UIViewController {
     
     // Rating Bar
     @IBOutlet weak var ratingBarLabel: UILabel!
+    
+    
+    @IBOutlet weak var rating1: UIImageView!
+    @IBOutlet weak var rating2: UIImageView!
+    @IBOutlet weak var rating3: UIImageView!
+    @IBOutlet weak var rating4: UIImageView!
+    @IBOutlet weak var rating5: UIImageView!
+    
     
     
     override func viewDidLoad() {
@@ -51,14 +54,7 @@ class DetailsViewController: UIViewController {
         if !product.userRating.isEmpty {
             ratingBarLabel.text = ratingText
             var ratingValue = ratingText.toInt()
-            for i in 1...10 {
-                if i <= ratingValue {
-                    (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_user.png")
-                } else {
-                    (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_mean.png")
-                }
-            }
-            
+            fillRatingStars(ratingValue!)
         } else {
             ratingBarLabel.text = ""
         }
@@ -66,10 +62,25 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
-        println("CLICK!!!\(sender.view.tag)")
+        var starNumber = sender.view.tag
+        println("CLICK!!!\(starNumber)")
+        fillRatingStars(starNumber)
+        ratingManager.rate(product.uuid, rating: starNumber, callback: ratingCallback)
         
-        
-        
+    }
+    
+    func ratingCallback(success: Bool) {
+        println("ratingCallback success=\(success)")
+    }
+    
+    func fillRatingStars(numberOfStars: Int) {
+        for i in 1...10 {
+            if i <= numberOfStars {
+                (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_user.png")
+            } else {
+                (self.view.viewWithTag(i) as UIImageView).image = UIImage(named: "rating_mean.png")
+            }
+        }
     }
 
 }
