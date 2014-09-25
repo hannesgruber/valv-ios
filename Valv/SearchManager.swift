@@ -34,11 +34,11 @@ class SearchManager: NSObject, NSXMLParserDelegate {
             urlString += "&authKey=\(AUTHKEY)"
         }
         
-        let escaped = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let escaped:String! = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         println(escaped)
 
-        let request = NSURLRequest(URL: NSURL.URLWithString(urlString))
+        let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
             

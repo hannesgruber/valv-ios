@@ -62,10 +62,10 @@ class DetailsViewController: UIViewController {
     }
     
     @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
-        var starNumber = sender.view.tag
+        var starNumber = sender.view?.tag
         println("CLICK!!!\(starNumber)")
-        fillRatingStars(starNumber)
-        ratingManager.rate(product.uuid, rating: starNumber, callback: ratingCallback)
+        fillRatingStars(starNumber!)
+        ratingManager.rate(product.uuid, rating: starNumber!, callback: ratingCallback)
         
     }
     

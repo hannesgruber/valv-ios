@@ -16,14 +16,14 @@ class RatingManager: NSObject, NSXMLParserDelegate {
     
     func rate(productId: String, rating: Int, callback : (success: Bool)->Void) {
         
-        var urlString = "http://valv.se/api/\(API_COOKIE)/products/rate/\(productId)/\(rating)/\(AUTHKEY)"
+        var urlString:String! = "http://valv.se/api/\(API_COOKIE)/products/rate/\(productId)/\(rating)/\(AUTHKEY)"
         
-        let escaped = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+        let escaped:String! = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
 
         
         println(escaped)
         
-        let request = NSURLRequest(URL: NSURL.URLWithString(escaped!))
+        let request = NSURLRequest(URL: NSURL.URLWithString(escaped))
         let task = session.dataTaskWithRequest(request, completionHandler: {(data, response, error) in
             
             

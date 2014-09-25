@@ -18,15 +18,16 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchManager.searchResults.count
     }
     
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
-        let cell = tableView!.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath) as SearchResultCell
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("tableCell", forIndexPath: indexPath) as SearchResultCell
         
         var product = searchManager.searchResults[indexPath.row]
         cell.title.text = product.title
@@ -67,10 +68,11 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        let index = searchResultsTableView.indexPathForSelectedRow()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
         
         if segue.identifier == "detailsSegue" {
+            let index: NSIndexPath = searchResultsTableView.indexPathForSelectedRow()!
             let product = searchManager.searchResults[index.row]
             let vc = segue.destinationViewController as DetailsViewController
             vc.product = product
