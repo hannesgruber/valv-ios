@@ -13,6 +13,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     @IBOutlet var searchResultsTableView : UITableView!
     @IBOutlet var searchBar: UISearchBar!
     
+    @IBOutlet weak var searchActivityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -70,14 +71,17 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         searchManager.clearSearchResults()
         searchResultsTableView.reloadData() // to empty the list
-        searchManager.search(searchBar.text, reloadSearchView)
+        searchActivityIndicator.startAnimating()
+        searchManager.search(searchBar.text, searchCallback)
+    }
+    
+    func searchCallback() {
+        searchActivityIndicator.stopAnimating()
+        reloadSearchView()
     }
     
     func reloadSearchView(){
-        // need to do this on main thread...
-        dispatch_async(dispatch_get_main_queue()) {
-            self.searchResultsTableView.reloadData()
-        }
+        self.searchResultsTableView.reloadData()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {

@@ -75,7 +75,11 @@ class DetailsViewController: UIViewController {
     }
     
     func starClicked(sender: AnyObject) {
-        if !doingRequest {
+        if !LOGGED_IN {
+            
+            UIAlertView(title: "Not logged in", message: "You need to be logged in to be able to rate a product.", delegate: nil, cancelButtonTitle: "Ok").show()
+            
+        } else if !doingRequest {
             doingRequest = true
             if (sender is UITapGestureRecognizer ){
                 if let i = (sender as UITapGestureRecognizer).view?.tag {

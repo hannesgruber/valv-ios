@@ -60,7 +60,9 @@ class SearchManager: NSObject, NSXMLParserDelegate {
                 self.searchResults = self.products
             }
             
-            callback()
+            dispatch_async(dispatch_get_main_queue()) {
+                callback()
+            }
         });
         task.resume()
     }

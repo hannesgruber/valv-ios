@@ -91,11 +91,16 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="bWj-4y-NiS"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0Dd-FI-k6z">
+                                <rect key="frame" x="150" y="299" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3hx-5e-MD3" firstAttribute="top" secondItem="7hD-eO-Ldc" secondAttribute="bottom" id="9MG-YF-rKG"/>
                             <constraint firstItem="7hD-eO-Ldc" firstAttribute="top" secondItem="YH1-E5-fTB" secondAttribute="bottom" id="EQX-eD-zFh"/>
+                            <constraint firstAttribute="centerY" secondItem="0Dd-FI-k6z" secondAttribute="centerY" constant="-25" id="Wb3-Pz-y9b"/>
+                            <constraint firstAttribute="centerX" secondItem="0Dd-FI-k6z" secondAttribute="centerX" id="fzu-Dn-98h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Valv" id="fFh-2s-BE0">
@@ -106,6 +111,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchActivityIndicator" destination="0Dd-FI-k6z" id="1a8-6J-70r"/>
                         <outlet property="searchDisplayController" destination="rxY-FF-0Dq" id="YXu-zB-qZZ"/>
                         <outlet property="searchResultsTableView" destination="7hD-eO-Ldc" id="zaZ-vf-veW"/>
                         <outlet property="settingsButton" destination="7EI-ku-d8G" id="ohv-G5-lVp"/>
@@ -359,7 +365,7 @@
                                     <constraint firstItem="8nF-wG-3BU" firstAttribute="leading" secondItem="SWm-Um-RKP" secondAttribute="trailing" id="IRm-ZB-8rd"/>
                                     <constraint firstItem="HEt-iw-MfC" firstAttribute="leading" secondItem="KMt-E8-Ssp" secondAttribute="trailing" id="IoL-eK-QFc"/>
                                     <constraint firstItem="sbD-dg-89r" firstAttribute="centerY" secondItem="pAE-WI-i1M" secondAttribute="centerY" id="K4W-7V-B7i"/>
-                                    <constraint firstItem="rF8-Zv-CCg" firstAttribute="centerY" secondItem="SWm-Um-RKP" secondAttribute="centerY" constant="2" id="KtG-Lg-1UC"/>
+                                    <constraint firstItem="rF8-Zv-CCg" firstAttribute="centerY" secondItem="SWm-Um-RKP" secondAttribute="centerY" constant="1" id="KtG-Lg-1UC"/>
                                     <constraint firstItem="e09-WY-1TS" firstAttribute="leading" secondItem="rvF-6v-pDN" secondAttribute="trailing" id="QYZ-PU-xcc"/>
                                     <constraint firstItem="sbD-dg-89r" firstAttribute="leading" secondItem="pAE-WI-i1M" secondAttribute="trailing" id="Syl-ET-Z07"/>
                                     <constraint firstItem="sbD-dg-89r" firstAttribute="centerY" secondItem="NPQ-Mt-3dD" secondAttribute="centerY" id="TJX-R1-75W"/>
