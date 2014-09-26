@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var loginSpinner: UIActivityIndicatorView!
+    @IBOutlet weak var loginActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +29,16 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func loginButtonClicked() {
         self.view.endEditing(true)
         
+        
         if LOGGED_IN {
             
+            loginActivityIndicator.startAnimating()
             loginManager.logout(AUTHKEY, callback: logoutCallback)
             
         } else {
             if !usernameTextField.text.isEmpty && !passwordTextField.text.isEmpty {
                 println("login clicked")
+                loginActivityIndicator.startAnimating()
                 loginManager.login(usernameTextField.text, password: passwordTextField.text, callback: loginCallback)
             }
         }
@@ -44,6 +48,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         // need to do this on main thread
         dispatch_async(dispatch_get_main_queue()) {
             println("callback sucess=\(success)")
+            
+            self.loginActivityIndicator.stopAnimating()
             
             LOGGED_IN = success
             
@@ -56,6 +62,8 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
         // need to do this on main thread
         dispatch_async(dispatch_get_main_queue()) {
             println("logout callback sucess=\(success)")
+            
+            self.loginActivityIndicator.stopAnimating()
             
             LOGGED_IN = false
             

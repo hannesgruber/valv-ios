@@ -181,11 +181,19 @@
                                     <action selector="createAccountButtonClicked" destination="QFd-kI-shf" eventType="touchUpInside" id="XHh-xg-eGp"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="oSP-Xj-Bpb">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.95556348759999998" blue="0.80127000719999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="oSP-Xj-Bpb" secondAttribute="centerY" id="0ey-zh-9tH"/>
+                            <constraint firstAttribute="centerX" secondItem="oSP-Xj-Bpb" secondAttribute="centerX" id="bpY-mv-Obf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="e5n-v5-zKb"/>
                     <connections>
+                        <outlet property="loginActivityIndicator" destination="oSP-Xj-Bpb" id="Xtu-8I-gkO"/>
                         <outlet property="loginButton" destination="u2x-8b-V0E" id="GX3-SH-sf1"/>
                         <outlet property="loginLabel" destination="tdJ-nO-hIV" id="mZ4-Jb-pZT"/>
                         <outlet property="passwordTextField" destination="jnY-Wc-Beo" id="pkq-PD-xhg"/>
