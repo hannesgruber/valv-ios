@@ -70,7 +70,7 @@ class SearchManager: NSObject, NSXMLParserDelegate {
     
     var products: [Product]!
     var currentProduct: Product!
-    var currentParentElement: String!
+    var currentParentElement: String! = ""
     var currentElement: String!
     var currentString = ""
     
