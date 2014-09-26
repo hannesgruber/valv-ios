@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol DetailsDelegate: class {
+    func didRate()
+}
+
 class DetailsViewController: UIViewController {
     
     var product: Product!
-
+    weak var delegate: DetailsDelegate?
+    
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var styleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -58,19 +64,48 @@ class DetailsViewController: UIViewController {
         } else {
             ratingBarLabel.text = ""
         }
+        
+        
+        
+        
+        
+        for i in 1...10 {
+            var imageView = (self.view.viewWithTag(i) as UIImageView)
+            let recognizer = UITapGestureRecognizer(target: self, action:"starClicked:")
+            imageView.addGestureRecognizer(recognizer)
+        }
 
     }
     
-    @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
-        var starNumber = sender.view?.tag
-        println("CLICK!!!\(starNumber)")
-        fillRatingStars(starNumber!)
-        ratingManager.rate(product.uuid, rating: starNumber!, callback: ratingCallback)
-        
+    func starClicked(sender: AnyObject) {
+        if (sender is UITapGestureRecognizer ){
+            if let i = (sender as UITapGestureRecognizer).view?.tag {
+                println("starClicked!!!\(i)")
+                fillRatingStars(i)
+                ratingManager.rate(product.uuid, rating: i, callback: ratingCallback)
+
+            }
+            
+        }
+       
     }
     
-    func ratingCallback(success: Bool) {
+//    @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
+//        var starNumber = sender.view?.tag
+//        println("CLICK!!!\(starNumber)")
+//        fillRatingStars(starNumber!)
+//        ratingManager.rate(product.uuid, rating: starNumber!, callback: ratingCallback)
+//        
+//    }
+    
+    func ratingCallback(success: Bool, rating: Int ) {
         println("ratingCallback success=\(success)")
+        if (success) {
+            product.userRating = String(rating)
+            self.delegate?.didRate()
+        } else {
+            fillRatingStars(0)
+        }
     }
     
     func fillRatingStars(numberOfStars: Int) {

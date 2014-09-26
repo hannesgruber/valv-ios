@@ -14,7 +14,7 @@ class RatingManager: NSObject, NSXMLParserDelegate {
     
     let session = NSURLSession.sharedSession()
     
-    func rate(productId: String, rating: Int, callback : (success: Bool)->Void) {
+    func rate(productId: String, rating: Int, callback : (success: Bool, rating: Int)->Void) {
         
         var urlString:String! = "http://valv.se/api/\(API_COOKIE)/products/rate/\(productId)/\(rating)/\(AUTHKEY)"
         
@@ -37,7 +37,7 @@ class RatingManager: NSObject, NSXMLParserDelegate {
             parser.delegate = self
             parser.parse()
             
-            callback(success: self.success)
+            callback(success: self.success, rating: rating)
         });
         task.resume()
     }

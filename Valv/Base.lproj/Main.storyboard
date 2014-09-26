@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GCA-IZ-MYF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GCA-IZ-MYF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Valv-->
@@ -262,9 +262,6 @@
                                             <constraint firstAttribute="height" constant="25" id="8iI-Ed-rKQ"/>
                                             <constraint firstAttribute="width" constant="25" id="b7G-Rd-Iaz"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="WQi-iW-tgs"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="8nF-wG-3BU" userLabel="rating2">
                                         <rect key="frame" x="33" y="8" width="25" height="25"/>
@@ -272,9 +269,6 @@
                                             <constraint firstAttribute="width" constant="25" id="4Mr-MC-Ula"/>
                                             <constraint firstAttribute="height" constant="25" id="75g-1U-WhE"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="8av-z7-ooS"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="pAE-WI-i1M" userLabel="rating3">
                                         <rect key="frame" x="58" y="8" width="25" height="25"/>
@@ -282,9 +276,6 @@
                                             <constraint firstAttribute="width" constant="25" id="Hbm-0j-nON"/>
                                             <constraint firstAttribute="height" constant="25" id="Zpk-rA-hnK"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="5uE-bJ-J7d"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbD-dg-89r" userLabel="rating4">
                                         <rect key="frame" x="83" y="8" width="25" height="25"/>
@@ -292,9 +283,6 @@
                                             <constraint firstAttribute="width" constant="25" id="1ZN-Qz-yUB"/>
                                             <constraint firstAttribute="height" constant="25" id="h91-JO-ayk"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="lr3-f9-BTs"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="NPQ-Mt-3dD" userLabel="rating5">
                                         <rect key="frame" x="108" y="8" width="25" height="25"/>
@@ -302,9 +290,6 @@
                                             <constraint firstAttribute="width" constant="25" id="MhQ-za-3L9"/>
                                             <constraint firstAttribute="height" constant="25" id="XiZ-uW-0z8"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="z74-lA-t1j"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="rvF-6v-pDN" userLabel="rating6">
                                         <rect key="frame" x="133" y="8" width="25" height="25"/>
@@ -312,9 +297,6 @@
                                             <constraint firstAttribute="width" constant="25" id="ah0-aa-Oda"/>
                                             <constraint firstAttribute="height" constant="25" id="dR9-bX-Ygr"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="zgB-wh-OTe"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="e09-WY-1TS" userLabel="rating7">
                                         <rect key="frame" x="158" y="8" width="25" height="25"/>
@@ -322,9 +304,6 @@
                                             <constraint firstAttribute="width" constant="25" id="VdV-VE-l4J"/>
                                             <constraint firstAttribute="height" constant="25" id="fwo-KO-fHf"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="jwe-n6-qCV"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="TfO-Ef-chh" userLabel="rating8">
                                         <rect key="frame" x="183" y="8" width="25" height="25"/>
@@ -332,9 +311,6 @@
                                             <constraint firstAttribute="height" constant="25" id="4wL-22-qbm"/>
                                             <constraint firstAttribute="width" constant="25" id="hhk-tK-pl5"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="ndy-uS-AXf"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="KMt-E8-Ssp" userLabel="rating9">
                                         <rect key="frame" x="208" y="8" width="25" height="25"/>
@@ -342,9 +318,6 @@
                                             <constraint firstAttribute="width" constant="25" id="WZt-s8-dDM"/>
                                             <constraint firstAttribute="height" constant="25" id="acG-ig-J8h"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="kjU-YF-oiO"/>
-                                        </connections>
                                     </imageView>
                                     <imageView tag="10" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="rating_mean.png" translatesAutoresizingMaskIntoConstraints="NO" id="HEt-iw-MfC" userLabel="rating10">
                                         <rect key="frame" x="233" y="8" width="25" height="25"/>
@@ -352,9 +325,6 @@
                                             <constraint firstAttribute="width" constant="25" id="S9M-Ta-r8c"/>
                                             <constraint firstAttribute="height" constant="25" id="mhI-vQ-F5g"/>
                                         </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="51x-Li-dDr" appends="YES" id="61N-Vr-rkA"/>
-                                        </connections>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF6-MQ-hcg">
                                         <rect key="frame" x="263" y="12" width="16" height="17"/>
@@ -434,11 +404,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nNp-P5-lg3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="51x-Li-dDr">
-                    <connections>
-                        <action selector="ratingStarClicked:" destination="5uY-DS-CYn" id="r6x-SE-zp5"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1440" y="236"/>
         </scene>
@@ -470,9 +435,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4">
-            <size key="portraitSize" width="320" height="568"/>
-            <size key="landscapeSize" width="568" height="320"/>
-        </simulatedScreenMetrics>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>

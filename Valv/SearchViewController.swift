@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, DetailsDelegate {
     @IBOutlet weak var settingsButton: UIBarButtonItem!
     @IBOutlet var searchResultsTableView : UITableView!
     @IBOutlet var searchBar: UISearchBar!
@@ -17,12 +17,24 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func didRate() {
+        reloadSearchView()
+    }
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if let indexPath = self.searchResultsTableView.indexPathForSelectedRow()
+        {
+            
+            searchResultsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return searchManager.searchResults.count
     }
-    
+
     
     // Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
     // Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
@@ -58,10 +70,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         searchManager.clearSearchResults()
         searchResultsTableView.reloadData() // to empty the list
-        searchManager.search(searchBar.text, callback)
+        searchManager.search(searchBar.text, reloadSearchView)
     }
     
-    func callback() {
+    func reloadSearchView(){
         // need to do this on main thread...
         dispatch_async(dispatch_get_main_queue()) {
             self.searchResultsTableView.reloadData()
@@ -69,15 +81,13 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        
         if segue.identifier == "detailsSegue" {
             let index: NSIndexPath = searchResultsTableView.indexPathForSelectedRow()!
             let product = searchManager.searchResults[index.row]
             let vc = segue.destinationViewController as DetailsViewController
             vc.product = product
-            // deselect so that row isnt selected when returning from details view
-            searchResultsTableView.deselectRowAtIndexPath(index, animated: true)
+            vc.delegate = self
+            
         }
     }
 
