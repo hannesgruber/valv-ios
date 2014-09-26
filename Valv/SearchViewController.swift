@@ -47,7 +47,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDe
         
         var ratingText = product.ratingValue
         var starName = "rating_mean.png"
-        if !product.userRating.isEmpty {
+        if !product.userRating.isEmpty && product.userRating != "0" {
             ratingText = product.userRating
             starName = "rating_user.png"
         } else if !product.userProposedRating.isEmpty {

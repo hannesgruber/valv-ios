@@ -22,6 +22,7 @@
 		74AA8441199DFFE80069E6C4 /* rating_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 74AA843E199DFFE80069E6C4 /* rating_user.png */; };
 		74AA8443199E5F320069E6C4 /* RatingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74AA8442199E5F320069E6C4 /* RatingManager.swift */; };
 		74B0A116199956250098D37D /* SearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B0A115199956250098D37D /* SearchManager.swift */; };
+		74EAC0C519D5ACEB004A57C4 /* rating_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 74EAC0C419D5ACEB004A57C4 /* rating_delete.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		74AA843E199DFFE80069E6C4 /* rating_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rating_user.png; path = Images.xcassets/rating_user.png; sourceTree = "<group>"; };
 		74AA8442199E5F320069E6C4 /* RatingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingManager.swift; sourceTree = "<group>"; };
 		74B0A115199956250098D37D /* SearchManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchManager.swift; sourceTree = "<group>"; };
+		74EAC0C419D5ACEB004A57C4 /* rating_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rating_delete.png; path = Images.xcassets/rating_delete.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		7449DCEB19990A4700AB0C9B /* Valv */ = {
 			isa = PBXGroup;
 			children = (
+				74EAC0C419D5ACEB004A57C4 /* rating_delete.png */,
 				7476C590199B766A0051FBA1 /* LoginManager.swift */,
 				7449DCEE19990A4700AB0C9B /* AppDelegate.swift */,
 				7449DCF019990A4700AB0C9B /* SearchViewController.swift */,
@@ -225,6 +228,7 @@
 				74AA8441199DFFE80069E6C4 /* rating_user.png in Resources */,
 				7449DCF619990A4700AB0C9B /* Images.xcassets in Resources */,
 				74AA8440199DFFE80069E6C4 /* rating_rec.png in Resources */,
+				74EAC0C519D5ACEB004A57C4 /* rating_delete.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,9 @@ class RatingManager: NSObject, NSXMLParserDelegate {
             parser.delegate = self
             parser.parse()
             
-            callback(success: self.success, rating: rating)
+            dispatch_async(dispatch_get_main_queue()) {
+                callback(success: self.success, rating: rating)
+            }
         });
         task.resume()
     }

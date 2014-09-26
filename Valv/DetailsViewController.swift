@@ -16,6 +16,7 @@ class DetailsViewController: UIViewController {
     
     var product: Product!
     weak var delegate: DetailsDelegate?
+    var doingRequest = false
     
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -25,15 +26,9 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var ratingStar: UIImageView!
     
     // Rating Bar
+    @IBOutlet weak var ratingBarDeleteButton: UIButton!
     @IBOutlet weak var ratingBarLabel: UILabel!
-    
-    
-    @IBOutlet weak var rating1: UIImageView!
-    @IBOutlet weak var rating2: UIImageView!
-    @IBOutlet weak var rating3: UIImageView!
-    @IBOutlet weak var rating4: UIImageView!
-    @IBOutlet weak var rating5: UIImageView!
-    
+    @IBOutlet weak var ratingAcivityIndicator: UIActivityIndicatorView!
     
     
     override func viewDidLoad() {
@@ -61,50 +56,79 @@ class DetailsViewController: UIViewController {
             ratingBarLabel.text = ratingText
             var ratingValue = ratingText.toInt()
             fillRatingStars(ratingValue!)
+            ratingBarDeleteButton.hidden = false
         } else {
             ratingBarLabel.text = ""
+            ratingBarDeleteButton.hidden = true
         }
-        
-        
-        
-        
         
         for i in 1...10 {
             var imageView = (self.view.viewWithTag(i) as UIImageView)
             let recognizer = UITapGestureRecognizer(target: self, action:"starClicked:")
             imageView.addGestureRecognizer(recognizer)
         }
+        
+        let recognizer = UITapGestureRecognizer(target: self, action:"deleteClicked")
+        ratingBarDeleteButton.addGestureRecognizer(recognizer)
+        
 
     }
     
     func starClicked(sender: AnyObject) {
-        if (sender is UITapGestureRecognizer ){
-            if let i = (sender as UITapGestureRecognizer).view?.tag {
-                println("starClicked!!!\(i)")
-                fillRatingStars(i)
-                ratingManager.rate(product.uuid, rating: i, callback: ratingCallback)
-
+        if !doingRequest {
+            doingRequest = true
+            if (sender is UITapGestureRecognizer ){
+                if let i = (sender as UITapGestureRecognizer).view?.tag {
+                    println("starClicked!!!\(i)")
+                    fillRatingStars(i)
+                    ratingManager.rate(product.uuid, rating: i, callback: ratingCallback)
+                    ratingBarLabel.text = ""
+                    ratingAcivityIndicator.startAnimating()
+                }
             }
-            
         }
-       
     }
     
-//    @IBAction func ratingStarClicked(sender: UITapGestureRecognizer) {
-//        var starNumber = sender.view?.tag
-//        println("CLICK!!!\(starNumber)")
-//        fillRatingStars(starNumber!)
-//        ratingManager.rate(product.uuid, rating: starNumber!, callback: ratingCallback)
-//        
-//    }
+    
+    func deleteClicked() {
+        if !doingRequest {
+            doingRequest = true
+            ratingManager.rate(product.uuid, rating: 0, callback: ratingCallback)
+            ratingBarLabel.text = ""
+            fillRatingStars(0)
+            ratingAcivityIndicator.startAnimating()
+        }
+    }
+
     
     func ratingCallback(success: Bool, rating: Int ) {
         println("ratingCallback success=\(success)")
+        doingRequest = false
+        ratingAcivityIndicator.stopAnimating()
         if (success) {
             product.userRating = String(rating)
+            
+            if rating == 0 {
+                ratingBarDeleteButton.hidden = true
+                ratingStar.image = UIImage(named: "rating_rec.png")
+                ratingLabel.text = product.userProposedRating
+            } else {
+                ratingBarDeleteButton.hidden = false
+                ratingBarLabel.text = product.userRating
+                ratingStar.image = UIImage(named: "rating_user.png")
+                ratingLabel.text = product.userRating
+            }
+            
             self.delegate?.didRate()
         } else {
-            fillRatingStars(0)
+            
+            if !product.userRating.isEmpty {
+                fillRatingStars(product.userRating.toInt()!)
+                ratingBarDeleteButton.hidden = false
+            } else {
+                fillRatingStars(0)
+            }
+            
         }
     }
     
